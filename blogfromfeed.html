@@ -9,35 +9,40 @@
   <div id="posts"></div>
 
   <script>
-    const rssUrl = 'https://withinandaround.blogspot.com/feeds/posts/default'; // replace with your Blogger blog's RSS feed URL
-    const maxPosts = 10; // maximum number of posts to display
+    google.load('feeds', '1', { 'callback': onFeedLoad });
 
-    fetch(rssUrl)
-      .then((response) => response.text())
-      .then((xml) => {
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(xml, 'application/xml');
-        const items = xmlDoc.getElementsByTagName('item');
-        let postHtml = '';
+    function onFeedLoad() {
+      const feedUrl = 'https://myblog.blogspot.com/feeds/posts/default'; // replace with your Blogger blog's RSS feed URL
+      const maxPosts = 10; // maximum number of posts to display
 
-        for (let i = 0; i < Math.min(items.length, maxPosts); i++) {
-          const item = items[i];
-          const title = item.getElementsByTagName('title')[0].textContent;
-          const link = item.getElementsByTagName('link')[0].getAttribute('href');
-          const pubDate = new Date(item.getElementsByTagName('pubDate')[0].textContent).toLocaleDateString();
-          const content = item.getElementsByTagName('content')[0].textContent.replace(/<(?:.|\n)*?>/gm, ''); // remove HTML tags
-          postHtml += `<article>
-                          <h2><a href="${link}">${title}</a></h2>
-                          <p><time>${pubDate}</time></p>
-                          <div>${content}</div>
-                        </article>`;
+      const feed = new google.feeds.Feed(feedUrl);
+      feed.setNumEntries(maxPosts);
+      feed.load((result) => {
+        if (!result.error) {
+          let postHtml = '';
+
+          for (let i = 0; i < result.feed.entries.length; i++) {
+            const entry = result.feed.entries[i];
+            const title = entry.title;
+            const link = entry.link;
+            const pubDate = new Date(entry.publishedDate).toLocaleDateString();
+            const content = entry.content.replace(/<(?:.|\n)*?>/gm, ''); // remove HTML tags
+
+            postHtml += `<article>
+                            <h2><a href="${link}">${title}</a></h2>
+                            <p><time>${pubDate}</time></p>
+                            <div>${content}</div>
+                          </article>`;
+          }
+
+          document.getElementById('posts').innerHTML = postHtml;
+        } else {
+          console.error('Error fetching RSS feed:', result.error);
         }
-
-        document.getElementById('posts').innerHTML = postHtml;
-      })
-      .catch((error) => {
-        console.error('Error fetching RSS feed:', error);
       });
+    }
   </script>
+
+  <script src="https://www.google.com/jsapi"></script>
 </body>
 </html>
