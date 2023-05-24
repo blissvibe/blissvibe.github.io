@@ -5,3 +5,11 @@ Blog id for Within and around
 Blogger a p i k e y b e l o w
 
 AIzaSyCFJ1eeeQoTMNOjiGHUqijar8LVvjL-_0E
+
+https://www.blogger.com/feeds/7985068672675675135/posts/default?alt=xml&max-results=500&start-index=1&key=AIzaSyCFJ1eeeQoTMNOjiGHUqijar8LVvjL-_0E
+
+cliet id
+679901891227-kctq4hpdkgn9k4n03cnmg4obcgs2t69k.apps.googleusercontent.com
+
+client secret
+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
