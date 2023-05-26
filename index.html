@@ -1,355 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-    <title>BeyondMisconceptions</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css?v=7f71d986e1" />
-
-    <meta name="description" content="Thoughts, stories and ideas.">
-    <link rel="canonical" href="http://localhost:2368/">
-    <meta name="referrer" content="no-referrer-when-downgrade">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog Post Title</title>
     
-    <meta property="og:site_name" content="BeyondMisconceptions">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="BeyondMisconceptions">
-    <meta property="og:description" content="Thoughts, stories and ideas.">
-    <meta property="og:url" content="http://localhost:2368/">
-    <meta property="og:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg">
-    <meta property="article:publisher" content="https://www.facebook.com/ghost">
+    <!-- SEO START -->
+    <meta name="description" content="This is the description of my blog post.">
+    <meta name="author" content="John Doe">
+    <meta name="keywords" content="blog, post, topic">
+    <link rel="canonical" href="https://example.com/my-blog-post-url">
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="BeyondMisconceptions">
-    <meta name="twitter:description" content="Thoughts, stories and ideas.">
-    <meta name="twitter:url" content="http://localhost:2368/">
-    <meta name="twitter:image" content="https://static.ghost.org/v5.0.0/images/publication-cover.jpg">
-    <meta name="twitter:site" content="@ghost">
-    <meta property="og:image:width" content="5000">
-    <meta property="og:image:height" content="3500">
-    
+    <meta name="twitter:title" content="My Blog Post Title">
+    <meta name="twitter:description" content="This is the description of my blog post.">
+    <meta name="twitter:image" content="https://example.com/image.jpg">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="My Blog Post Title">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://example.com/my-blog-post-url">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:description" content="This is the descriptionof my blog post.">
+    <meta property="og:site_name" content="My Blog">
+
+    <!-- Schema -->
     <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "publisher": {
-        "@type": "Organization",
-        "name": "BeyondMisconceptions",
-        "url": "http://localhost:2368/",
-        "logo": {
+      {
+        "@context": "https://schema.org/",
+        "@type": "BlogPosting",
+        "headline": "My Blog Post Title",
+        "image": "https://example.com/image.jpg",
+        "author": {
+          "@type": "Person",
+          "name": "John Doe"
+        },
+        "datePublished": "2023-05-26",
+        "description": "This is the description of my blog post.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "My Blog",
+          "logo": {
             "@type": "ImageObject",
-            "url": "http://localhost:2368/favicon.ico"
+            "url": "https://example.com/logo.png",
+            "width": 600,
+            "height": 60
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://example.com/my-blog-post-url"
         }
-    },
-    "url": "http://localhost:2368/",
-    "image": {
-        "@type": "ImageObject",
-        "url": "https://static.ghost.org/v5.0.0/images/publication-cover.jpg",
-        "width": 5000,
-        "height": 3500
-    },
-    "mainEntityOfPage": "http://localhost:2368/",
-    "description": "Thoughts, stories and ideas."
-}
+      }
     </script>
+    <!-- SEO END -->
 
-    <meta name="generator" content="Ghost 5.49">
-    <link rel="alternate" type="application/rss+xml" title="BeyondMisconceptions" href="http://localhost:2368/rss/">
-    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.32/umd/portal.min.js" data-i18n="false" data-ghost="http://localhost:2368/" data-key="df5203b79116a6a1bd7e42275d" data-api="http://localhost:2368/ghost/api/content/" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
-.gh-post-upgrade-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
-    width: 100%;
-    color: #ffffff;
-    font-size: 16px;
-}
+    <meta property="fb:app_id" content="1234567890">
+    <meta name="pinterest" content="nopin" />
 
-.gh-post-upgrade-cta-content {
-    border-radius: 8px;
-    padding: 40px 4vw;
-}
+    <style>
+      /* Mobile-first styles */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
 
-.gh-post-upgrade-cta h2 {
-    color: #ffffff;
-    font-size: 28px;
-    letter-spacing: -0.2px;
-    margin: 0;
-    padding: 0;
-}
-
-.gh-post-upgrade-cta p {
-    margin: 20px 0 0;
-    padding: 0;
-}
-
-.gh-post-upgrade-cta small {
-    font-size: 16px;
-    letter-spacing: -0.2px;
-}
-
-.gh-post-upgrade-cta a {
-    color: #ffffff;
-    cursor: pointer;
-    font-weight: 500;
-    box-shadow: none;
-    text-decoration: underline;
-}
-
-.gh-post-upgrade-cta a:hover {
-    color: #ffffff;
-    opacity: 0.8;
-    box-shadow: none;
-    text-decoration: underline;
-}
-
-.gh-post-upgrade-cta a.gh-btn {
-    display: block;
-    background: #ffffff;
-    text-decoration: none;
-    margin: 28px 0 0;
-    padding: 8px 18px;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.gh-post-upgrade-cta a.gh-btn:hover {
-    opacity: 0.92;
-}</style>
-    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js" data-key="df5203b79116a6a1bd7e42275d" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css" data-sodo-search="http://localhost:2368/" crossorigin="anonymous"></script>
-    
-    <link href="http://localhost:2368/webmentions/receive/" rel="webmention">
-    <script defer src="/public/member-attribution.min.js?v=7f71d986e1"></script><style>:root {--ghost-accent-color: #FF1A75;}</style>
-
-</head>
-<body class="home-template is-head-left-logo has-cover">
-<div class="viewport">
-
-    <header id="gh-head" class="gh-head outer">
-        <div class="gh-head-inner inner">
-            <div class="gh-head-brand">
-                <a class="gh-head-logo no-image" href="http://localhost:2368">
-                        BeyondMisconceptions
-                </a>
-                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
-                <button class="gh-burger"></button>
-            </div>
-
-            <nav class="gh-head-menu">
-                <ul class="nav">
-    <li class="nav-home nav-current"><a href="http://localhost:2368/">Home</a></li>
-    <li class="nav-about"><a href="http://localhost:2368/about/">About</a></li>
-</ul>
-
-            </nav>
-
-            <div class="gh-head-actions">
-                    <button class="gh-search gh-icon-btn" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
-                    <div class="gh-head-members">
-                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
-                                <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
-                    </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="site-content">
+      .header {
+     	font-family: Arial, sans-serif;
+        font-size: 22px;
+        background-color: inherit;
+        color: inherit;
+        margin: 0 auto;
+        padding: 0px 20px;
         
-<div class="site-header-content outer">
+        text-align: center;
+      }
 
-            <img class="site-header-cover"
-                srcset="https://static.ghost.org/v5.0.0/images/publication-cover.jpg 300w,
-                        https://static.ghost.org/v5.0.0/images/publication-cover.jpg 600w,
-                        https://static.ghost.org/v5.0.0/images/publication-cover.jpg 1000w,
-                        https://static.ghost.org/v5.0.0/images/publication-cover.jpg 2000w"
-                sizes="100vw"
-                src="https://static.ghost.org/v5.0.0/images/publication-cover.jpg"
-                alt="BeyondMisconceptions"
-            />
+      .header h1 {
+        margin: 0;
+      }
 
-        <div class="site-header-inner inner">
-                    <h1 class="site-title">BeyondMisconceptions</h1>
-                <p class="site-description">Thoughts, stories and ideas.</p>
-        </div>
+	  .seodescription {
+        text-align: center;
+        font-size: 22px;
+        color: #666;
+      }
+      .meta {
+        text-align: center;
+        display:none;
+      }
+      .timeconsumption {
+        text-align: center;
+        font-size: 12px;
+        color: #666;
+      }
 
-</div>
+      .meta p {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+      }
 
-<main id="site-main" class="site-main outer">
-<div class="inner posts">
+      .content {
+        padding: 20px;
+      }
 
-    <div class="post-feed">
-            
-<article class="post-card post post-card-large">
+      .content p {
+        margin-bottom: 1.5em;
+     }
 
-    <a class="post-card-image-link" href="/l-ala-lalalal-la-l/">
+     .footer {
+  background-color: #000;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
 
-        <img class="post-card-image"
-            srcset="/content/images/size/w300/2023/05/Top-21-Best-short-quotes-Meaningful-Short-Deep-Quotes.jpg 300w,
-                    /content/images/size/w600/2023/05/Top-21-Best-short-quotes-Meaningful-Short-Deep-Quotes.jpg 600w,
-                    /content/images/size/w1000/2023/05/Top-21-Best-short-quotes-Meaningful-Short-Deep-Quotes.jpg 1000w,
-                    /content/images/size/w2000/2023/05/Top-21-Best-short-quotes-Meaningful-Short-Deep-Quotes.jpg 2000w"
-            sizes="(max-width: 1000px) 400px, 800px"
-            src="/content/images/size/w600/2023/05/Top-21-Best-short-quotes-Meaningful-Short-Deep-Quotes.jpg"
-            alt="L ala lalalal la l"
-            loading="lazy"
-        />
+nav {
+  text-align: center;
+}
 
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-    </a>
+nav li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
 
-    <div class="post-card-content">
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+      
+      
+      .main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-        <a class="post-card-content-link" href="/l-ala-lalalal-la-l/">
-            <header class="post-card-header">
-                <div class="post-card-tags">
-                </div>
-                <h2 class="post-card-title">
-                    L ala lalalal la l
-                </h2>
-            </header>
-                <div class="post-card-excerpt">het heyeh ehy
+.logo {
+ flex-shrink: 0;
+}
 
+.logo img {
+  height: 40px;
+  width: auto;
+}
 
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-ergerg
+.menu li {
+  margin-right: 20px;
+}
 
+.menu li:last-child {
+  margin-right: 0;
+}
 
+.menu a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+      
 
-fe
+      /* Media queries for larger screens */
+      @media screen and (min-width: 960px) {
+        body {
+          font-size: 18px;
+        }
 
-df
+		header {
+          text-align: center;  
+        }
+        
+        .header {
+          padding: 40px;
+          margin: 0 auto;
+        }
 
-e
+        .meta {
+          padding: 20px 40px;
+        }
 
-df v
+        .content {
+          padding-left: 20%; padding-right: 20%;
+        }
 
-edf
-
-vd
-
-sf
-
-sdf
-
-sdf
-
-sd
-
-fsd
-
-f
-
-sdf
-
-s
-
-df
-
-sdf
-
-sd
-
-f</div>
-        </a>
-
-        <footer class="post-card-meta">
-            <time class="post-card-meta-date" datetime="2023-05-24">May 24, 2023</time>
-        </footer>
-
-    </div>
-
-</article>
-            
-<article class="post-card post tag-news dynamic">
-
-    <a class="post-card-image-link" href="/coming-soon/">
-
-        <img class="post-card-image"
-            srcset="https://static.ghost.org/v4.0.0/images/feature-image.jpg 300w,
-                    https://static.ghost.org/v4.0.0/images/feature-image.jpg 600w,
-                    https://static.ghost.org/v4.0.0/images/feature-image.jpg 1000w,
-                    https://static.ghost.org/v4.0.0/images/feature-image.jpg 2000w"
-            sizes="(max-width: 1000px) 400px, 800px"
-            src="https://static.ghost.org/v4.0.0/images/feature-image.jpg"
-            alt="Coming soon"
-            loading="lazy"
-        />
-
-
-    </a>
-
-    <div class="post-card-content">
-
-        <a class="post-card-content-link" href="/coming-soon/">
-            <header class="post-card-header">
-                <div class="post-card-tags">
-                        <span class="post-card-primary-tag">News</span>
-                </div>
-                <h2 class="post-card-title">
-                    Coming soon
-                </h2>
-            </header>
-                <div class="post-card-excerpt">This is BeyondMisconceptions, a brand new site by Editorial Staff that's just getting started. Things will be up and running here shortly, but you can subscribe in the meantime if you'd like to stay up to date and receive emails when new content is published!</div>
-        </a>
-
-        <footer class="post-card-meta">
-            <time class="post-card-meta-date" datetime="2023-05-24">May 24, 2023</time>
-        </footer>
-
-    </div>
-
-</article>
-    </div>
-
-    <nav class="pagination">
-    <span class="page-number">Page 1 of 1</span>
+        .footer {
+          padding: 40px;
+        }
+        
+      }
+    </style>
+  </head>
+  <body>
+  <nav class="main-nav">
+  <a href="#" class="logo">
+    <img src="https://www.mansueto.com/wp-content/themes/mv/images/Manuseto_Ventures_Logo.png" alt="My Logo">
+  </a>
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
 </nav>
 
-
-</div>
-</main>
-
-    </div>
-
-    <footer class="site-footer outer">
-        <div class="inner">
-            <section class="copyright"><a href="http://localhost:2368">BeyondMisconceptions</a> &copy; 2023</section>
-            <nav class="site-footer-nav">
-                <ul class="nav">
-    <li class="nav-sign-up nav-current"><a href="#/portal/">Sign up</a></li>
-</ul>
-
-            </nav>
-            <div class="gh-powered-by"><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+    <article>
+      <header>
+        <div class="header">
+			<h1>Does Therapy Really Work? Let’s Unpack That</h1>
+		</div>
+        
+        <div class="seodescription">
+        <p>The rise of WFH globetrotters spells big problems for locals in cities like Mexico City and Medellín.</p>
         </div>
-    </footer>
+        
+        <div class="meta">
+      <p>Published on May 26, 2023 by John Doe</p>
+      	</div>
+        
+        <div class="timeconsumption">
+        6 minutes read.
+        </div>
+        
+      <!-- Social sharing buttons -->
+      <div class="social">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://exmple.com/my-blog-post-url" target="_blank" rel="noopener"><img src="https://example.com/facebook.png" alt="Share on Facebook"></a>
+        <a href="https://twitter.com/intent/tweet?url=https://example.com/my-blog-post-url&amp;text=My%20Blog%20Post%20Title" target="_blank" rel="noopener"><img src="https://example.com/twitter.png" alt="Share on Twitter"></a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://example.com/my-blog-post-url&amp;title=My%20Blog%20Post%20Title" target="_blank" rel="noopener"><img src="https://example.com/linkedin.png" alt="Share on LinkedIn"></a>
+        <a href="https://pinterest.com/pin/create/button/?url=https://example.com/my-blog-post-url&amp;media=https://example.com/image.jpg&amp;description=My%20Blog%20Post%20Title" target="_blank" rel="noopener"><img src="https://example.com/pinterest.png" alt="Share on Pinterest"></a>
+      
+    </div>
+      </header>
+      
+      <div class="content">
+      	<p>The next five years are almost guaranteed to be sweltering, the World Meteorological Organization (WMO) warned today. Climate change has already raised baseline temperatures for the planet. Now, a weather pattern known as El Ni&ntilde;o is going to make things even hotter when it develops later this year.</p>
 
-</div>
+<p>That one-two punch from El Ni&ntilde;o and climate change is expected to &ldquo;push global temperatures into uncharted territory,&rdquo; WMO Secretary-General Petteri Taalas said in a press release today. &ldquo;This will have far-reaching repercussions for health, food security, water management and the environment. We need to be prepared.&rdquo;</p>
 
+<p>&ldquo;We need to be prepared.&rdquo;</p>
 
-<script
-    src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-    crossorigin="anonymous">
-</script>
-<script src="/assets/built/casper.js?v=7f71d986e1"></script>
-<script>
-$(document).ready(function () {
-    // Mobile Menu Trigger
-    $('.gh-burger').click(function () {
-        $('body').toggleClass('gh-head-open');
-    });
-    // FitVids - Makes video embeds responsive
-    $(".gh-content").fitVids();
-});
-</script>
+<p>There&rsquo;s a 98 percent chance that one of the following five years will be the warmest on record, according to a WMO report released today. There&rsquo;s also a 98 percent likelihood that the average temperature for the entire five-year period will be hotter than the previous five years.</p>
 
+<p>The planet is already running a fever. The last eight years have been the eight hottest on the books, the WMO reported in January. In the past few years alone, we&rsquo;ve witnessed the jaw-dropping damage that extreme temperatures can bring.</p>
 
+<p>The most extreme summer heatwave ever recorded in North America buckled roads and triggered a spike in emergency department visits in the Pacific Northwest US in 2021. China suffered its most severe heatwave on record last year. It was so widespread and long-lasting &mdash; stretching out more than 70 days &mdash; that it was likely also the most severe heat spell ever documented in the world, according to weather historian Maximiliano Herrera. Another record-smashing heatwave in July of last year sent temperatures in the notoriously cool and cloudy UK soaring above 40 degrees Celsius for the first time &mdash; an event researchers found to be &ldquo;virtually impossible&rdquo; without climate change.</p>
 
-</body>
+<p>All of that went down despite the mitigating effects of a rare and unusually long-lasting &ldquo;triple-dip&rdquo; La Ni&ntilde;a from September 2020 until the March of this year. Think of it as the opposite of El Ni&ntilde;o; La Ni&ntilde;a is a weather pattern that has a cooling effect on the planet.</p>
+
+<p>Right now, with neither La Ni&ntilde;a nor El Ni&ntilde;o taking place, trade winds over the Pacific Ocean help push warm waters westward from South America toward Asia. As that happens, cooler water rises from deep in the ocean toward the surface. Those trade winds weaken with El Ni&ntilde;o, allowing warm water to flow back east. The warmer water also pushes the Pacific jet stream, a fast-flowing air current, southward &mdash; which can influence the weather.</p>
+
+<p>El Ni&ntilde;o is expected to take shape sometime between May and July and last at least until the winter, according to the National Weather Service Climate Prediction Center. It can take up to a year before El Ni&ntilde;o starts to affect global temperatures, the WMO says, which could be 2024 in this case.</p>
+
+<p>With El Ni&ntilde;o likely to push the mercury up even higher than we&rsquo;ve seen during the persistent La Ni&ntilde;a event over the past few years, global temperatures could soon breach a worrying benchmark. There&rsquo;s now a 66 percent chance that during at least one year between 2023 and 2027, the annual average global temperature will rise more than 1.5 degrees Celsius higher than the preindustrial era (aka before burning fossil fuels created enough greenhouse gas pollution to heat the planet).</p>
+
+<p>To be clear, 1.5 degrees of warming is a big deal. The Paris climate agreement strives to keep the world from warming beyond that threshold. So far, the planet has warmed by around 1.1 degrees Celsius above preindustrial levels &mdash; which is the main driver of the more extreme weather we&rsquo;re already seeing today. There&rsquo;s still a slim window of time to achieve that goal &mdash; since the WMO predicts that the world will only temporarily overshoot the 1.5-degree target over the next five years.</p>
+
+<p>&ldquo;This report does not mean that we will permanently exceed the 1.5&deg;C level specified in the Paris agreement, which refers to long-term warming over many years. However, WMO is sounding the alarm that we will breach the 1.5&deg;C level on a temporary basis with increasing frequency,&rdquo; Taalas said in the press release.</p>
+
+<p>Not that long ago, in 2015, the chance of the world experiencing warming above 1.5 degrees C</p>
+  	  </div>
+    </article> 
+
+<footer>
+  <div class="footer">
+    <nav>
+      <ul>
+        <li><a href="/privacy-policy">Privacy policy</a></li>
+        <li><a href="/terms-of-use">Terms of use</a></li>
+        <li><a href="/sitemap">Sitemap</a></li>
+      </ul>
+    </nav>
+    <p>Copyright © 2023 My Blog. All rights reserved.</p>
+  </div>
+</footer>
+  </body>
 </html>
