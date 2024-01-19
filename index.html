@@ -27,6 +27,35 @@
 
     <script>
         function breakText() {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Breaker</title>
+    <style>
+        textarea {
+            width: 100%;
+            height: 150px;
+        }
+
+        #output {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Text Breaker</h2>
+    <label for="inputText">Enter your long text:</label>
+    <textarea id="inputText"></textarea>
+
+    <button onclick="breakText()">Break Text</button>
+
+    <div id="output"></div>
+
+    <script>
+        function breakText() {
             const inputText = document.getElementById('inputText').value;
             const maxPartLength = 500;
             const firstPartLength = 480;
@@ -49,9 +78,18 @@
                     parts[parts.length - 1] += remainingText.slice(0, nextSentenceEnd);
                     remainingText = remainingText.slice(nextSentenceEnd);
                 } else {
-                    // Break at the next 500 characters
-                    parts.push(remainingText.slice(0, maxPartLength));
-                    remainingText = remainingText.slice(maxPartLength);
+                    // Find the last space before the character limit
+                    const lastSpace = parts[parts.length - 1].lastIndexOf(' ');
+
+                    // If there's a space, shift to the next part
+                    if (lastSpace !== -1) {
+                        parts.push(parts[parts.length - 1].slice(lastSpace + 1));
+                        parts[parts.length - 2] = parts[parts.length - 2].slice(0, lastSpace);
+                    } else {
+                        // No space found, break at the next 500 characters
+                        parts.push(remainingText.slice(0, maxPartLength));
+                        remainingText = remainingText.slice(maxPartLength);
+                    }
                 }
             }
 
