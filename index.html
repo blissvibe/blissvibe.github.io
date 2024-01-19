@@ -1,300 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog Post Title</title>
-    
-    <!-- SEO START -->
-    <meta name="description" content="This is the description of my blog post.">
-    <meta name="author" content="John Doe">
-    <meta name="keywords" content="blog, post, topic">
-    <link rel="canonical" href="https://example.com/my-blog-post-url">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="My Blog Post Title">
-    <meta name="twitter:description" content="This is the description of my blog post.">
-    <meta name="twitter:image" content="https://example.com/image.jpg">
-
-    <!-- OpenGraph -->
-    <meta property="og:title" content="My Blog Post Title">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://example.com/my-blog-post-url">
-    <meta property="og:image" content="https://example.com/image.jpg">
-    <meta property="og:description" content="This is the descriptionof my blog post.">
-    <meta property="og:site_name" content="My Blog">
-
-    <!-- Schema -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org/",
-        "@type": "BlogPosting",
-        "headline": "My Blog Post Title",
-        "image": "https://example.com/image.jpg",
-        "author": {
-          "@type": "Person",
-          "name": "John Doe"
-        },
-        "datePublished": "2023-05-26",
-        "description": "This is the description of my blog post.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "My Blog",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://example.com/logo.png",
-            "width": 600,
-            "height": 60
-          }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://example.com/my-blog-post-url"
-        }
-      }
-    </script>
-    <!-- SEO END -->
-
-    <meta property="fb:app_id" content="1234567890">
-    <meta name="pinterest" content="nopin" />
-
+    <title>Text Breaker</title>
     <style>
-      /* Mobile-first styles */
-      body {
-        font-family: Arial, sans-serif;
-        font-size: 16px;
-        line-height: 1.5;
-        margin: 0;
-        padding: 0;
-      }
-
-      .header {
-     	font-family: Arial, sans-serif;
-        font-size: 22px;
-        background-color: inherit;
-        color: inherit;
-        margin: 0 auto;
-        padding: 0px 20px;
-        
-        text-align: center;
-      }
-
-      .header h1 {
-        margin: 0;
-      }
-
-	  .seodescription {
-        text-align: center;
-        font-size: 22px;
-        color: #666;
-      }
-      .meta {
-        text-align: center;
-        display:none;
-      }
-      .timeconsumption {
-        text-align: center;
-        font-size: 12px;
-        color: #666;
-      }
-
-      .meta p {
-        margin: 0;
-        font-size: 14px;
-        color: #666;
-      }
-
-      .content {
-        padding: 20px;
-      }
-
-      .content p {
-        margin-bottom: 1.5em;
-     }
-
-     .footer {
-  background-color: #000;
-  color: #ffffff;
-  padding: 20px;
-  text-align: center;
-}
-
-nav {
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav li {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-      
-      
-      .main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
- flex-shrink: 0;
-}
-
-.logo img {
-  height: 40px;
-  width: auto;
-}
-
-.menu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  margin-right: 20px;
-}
-
-.menu li:last-child {
-  margin-right: 0;
-}
-
-.menu a {
-  color: #333;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-}
-      
-
-      /* Media queries for larger screens */
-      @media screen and (min-width: 960px) {
-        body {
-          font-size: 18px;
+        textarea {
+            width: 100%;
+            height: 150px;
         }
 
-		header {
-          text-align: center;  
+        #output {
+            margin-top: 10px;
         }
-        
-        .header {
-          padding: 40px;
-          margin: 0 auto;
-        }
-
-        .meta {
-          padding: 20px 40px;
-        }
-
-        .content {
-          padding-left: 20%; padding-right: 20%;
-        }
-
-        .footer {
-          padding: 40px;
-        }
-        
-      }
     </style>
-  </head>
-  <body>
-  <nav class="main-nav">
-  <a href="#" class="logo">
-    <img src="https://www.mansueto.com/wp-content/themes/mv/images/Manuseto_Ventures_Logo.png" alt="My Logo">
-  </a>
-  <ul class="menu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>
+</head>
+<body>
 
-    <article>
-      <header>
-        <div class="header">
-			<h1>Does Therapy Really Work? Let’s Unpack That</h1>
-		</div>
-        
-        <div class="seodescription">
-        <p>The rise of WFH globetrotters spells big problems for locals in cities like Mexico City and Medellín.</p>
-        </div>
-        
-        <div class="meta">
-      <p>Published on May 26, 2023 by John Doe</p>
-      	</div>
-        
-        <div class="timeconsumption">
-        6 minutes read.
-        </div>
-        
-      <!-- Social sharing buttons -->
-      <div class="social">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://exmple.com/my-blog-post-url" target="_blank" rel="noopener"><img src="https://example.com/facebook.png" alt="Share on Facebook"></a>
-        <a href="https://twitter.com/intent/tweet?url=https://example.com/my-blog-post-url&amp;text=My%20Blog%20Post%20Title" target="_blank" rel="noopener"><img src="https://example.com/twitter.png" alt="Share on Twitter"></a>
-        <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://example.com/my-blog-post-url&amp;title=My%20Blog%20Post%20Title" target="_blank" rel="noopener"><img src="https://example.com/linkedin.png" alt="Share on LinkedIn"></a>
-        <a href="https://pinterest.com/pin/create/button/?url=https://example.com/my-blog-post-url&amp;media=https://example.com/image.jpg&amp;description=My%20Blog%20Post%20Title" target="_blank" rel="noopener"><img src="https://example.com/pinterest.png" alt="Share on Pinterest"></a>
-      
-    </div>
-      </header>
-      
-      <div class="content">
-      	<p>The next five years are almost guaranteed to be sweltering, the World Meteorological Organization (WMO) warned today. Climate change has already raised baseline temperatures for the planet. Now, a weather pattern known as El Ni&ntilde;o is going to make things even hotter when it develops later this year.</p>
+    <h2>Text Breaker</h2>
+    <label for="inputText">Enter your long text:</label>
+    <textarea id="inputText"></textarea>
 
-<p>That one-two punch from El Ni&ntilde;o and climate change is expected to &ldquo;push global temperatures into uncharted territory,&rdquo; WMO Secretary-General Petteri Taalas said in a press release today. &ldquo;This will have far-reaching repercussions for health, food security, water management and the environment. We need to be prepared.&rdquo;</p>
+    <button onclick="breakText()">Break Text</button>
 
-<p>&ldquo;We need to be prepared.&rdquo;</p>
+    <div id="output"></div>
 
-<p>There&rsquo;s a 98 percent chance that one of the following five years will be the warmest on record, according to a WMO report released today. There&rsquo;s also a 98 percent likelihood that the average temperature for the entire five-year period will be hotter than the previous five years.</p>
+    <script>
+        function breakText() {
+            const inputText = document.getElementById('inputText').value;
+            const maxPartLength = 500;
+            const firstPartLength = 480;
 
-<p>The planet is already running a fever. The last eight years have been the eight hottest on the books, the WMO reported in January. In the past few years alone, we&rsquo;ve witnessed the jaw-dropping damage that extreme temperatures can bring.</p>
+            let parts = [];
+            let remainingText = inputText;
 
-<p>The most extreme summer heatwave ever recorded in North America buckled roads and triggered a spike in emergency department visits in the Pacific Northwest US in 2021. China suffered its most severe heatwave on record last year. It was so widespread and long-lasting &mdash; stretching out more than 70 days &mdash; that it was likely also the most severe heat spell ever documented in the world, according to weather historian Maximiliano Herrera. Another record-smashing heatwave in July of last year sent temperatures in the notoriously cool and cloudy UK soaring above 40 degrees Celsius for the first time &mdash; an event researchers found to be &ldquo;virtually impossible&rdquo; without climate change.</p>
+            // Extract the first part
+            const firstPart = remainingText.slice(0, firstPartLength);
+            parts.push(firstPart);
+            remainingText = remainingText.slice(firstPartLength);
 
-<p>All of that went down despite the mitigating effects of a rare and unusually long-lasting &ldquo;triple-dip&rdquo; La Ni&ntilde;a from September 2020 until the March of this year. Think of it as the opposite of El Ni&ntilde;o; La Ni&ntilde;a is a weather pattern that has a cooling effect on the planet.</p>
+            // Break the remaining text into parts of 500 characters
+            while (remainingText.length > 0) {
+                // Find the next sentence
+                const nextSentenceEnd = remainingText.indexOf('.') + 1;
 
-<p>Right now, with neither La Ni&ntilde;a nor El Ni&ntilde;o taking place, trade winds over the Pacific Ocean help push warm waters westward from South America toward Asia. As that happens, cooler water rises from deep in the ocean toward the surface. Those trade winds weaken with El Ni&ntilde;o, allowing warm water to flow back east. The warmer water also pushes the Pacific jet stream, a fast-flowing air current, southward &mdash; which can influence the weather.</p>
+                // If the sentence exceeds the character limit, shift to the next part
+                if (nextSentenceEnd > 0 && parts[parts.length - 1].length + nextSentenceEnd <= maxPartLength) {
+                    parts[parts.length - 1] += remainingText.slice(0, nextSentenceEnd);
+                    remainingText = remainingText.slice(nextSentenceEnd);
+                } else {
+                    // Break at the next 500 characters
+                    parts.push(remainingText.slice(0, maxPartLength));
+                    remainingText = remainingText.slice(maxPartLength);
+                }
+            }
 
-<p>El Ni&ntilde;o is expected to take shape sometime between May and July and last at least until the winter, according to the National Weather Service Climate Prediction Center. It can take up to a year before El Ni&ntilde;o starts to affect global temperatures, the WMO says, which could be 2024 in this case.</p>
+            displayOutput(parts);
+        }
 
-<p>With El Ni&ntilde;o likely to push the mercury up even higher than we&rsquo;ve seen during the persistent La Ni&ntilde;a event over the past few years, global temperatures could soon breach a worrying benchmark. There&rsquo;s now a 66 percent chance that during at least one year between 2023 and 2027, the annual average global temperature will rise more than 1.5 degrees Celsius higher than the preindustrial era (aka before burning fossil fuels created enough greenhouse gas pollution to heat the planet).</p>
+        function displayOutput(parts) {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '<h3>Result:</h3>';
 
-<p>To be clear, 1.5 degrees of warming is a big deal. The Paris climate agreement strives to keep the world from warming beyond that threshold. So far, the planet has warmed by around 1.1 degrees Celsius above preindustrial levels &mdash; which is the main driver of the more extreme weather we&rsquo;re already seeing today. There&rsquo;s still a slim window of time to achieve that goal &mdash; since the WMO predicts that the world will only temporarily overshoot the 1.5-degree target over the next five years.</p>
+            parts.forEach((part, index) => {
+                const partDiv = document.createElement('div');
+                partDiv.textContent = `Part ${index + 1}: ${part}`;
+                outputDiv.appendChild(partDiv);
+            });
+        }
+    </script>
 
-<p>&ldquo;This report does not mean that we will permanently exceed the 1.5&deg;C level specified in the Paris agreement, which refers to long-term warming over many years. However, WMO is sounding the alarm that we will breach the 1.5&deg;C level on a temporary basis with increasing frequency,&rdquo; Taalas said in the press release.</p>
-
-<p>Not that long ago, in 2015, the chance of the world experiencing warming above 1.5 degrees C</p>
-  	  </div>
-    </article> 
-
-<footer>
-  <div class="footer">
-    <nav>
-      <ul>
-        <li><a href="/privacy-policy">Privacy policy</a></li>
-        <li><a href="/terms-of-use">Terms of use</a></li>
-        <li><a href="/sitemap">Sitemap</a></li>
-      </ul>
-    </nav>
-    <p>Copyright © 2023 My Blog. All rights reserved.</p>
-  </div>
-</footer>
-  </body>
+</body>
 </html>
